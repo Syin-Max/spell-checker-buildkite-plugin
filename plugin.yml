@@ -1,0 +1,9 @@
+name: Spell Checker
+description: Annotates the build with mis-spell checking
+author: https://github.com/Syin-Max
+requirements: []
+configuration:
+  properties:
+    pattern:
+      type: string
+  additionalProperties: false
