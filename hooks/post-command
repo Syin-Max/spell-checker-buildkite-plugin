@@ -5,8 +5,8 @@ PATTERN="$BUILDKITE_PLUGIN_SPELL_CHECKER_PATTERN"
 
 echo "--- Checking File Spell"
 
-Error=$(docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest "**/*.md"i)
+Misspell=$(docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "**/*.md")
 
-echo "Found ${ERROR} in the file"
+echo "Found ${Misspell} in the file"
 
-buildkite-agent annotate "Found ${ERROR} From The Files"
+buildkite-agent annotate "Found ${Misspell} From The Files"
