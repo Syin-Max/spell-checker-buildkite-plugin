@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-PATTERN="$BUILDKITE_PLUGIN_SPELL_CHECKER_BUILDKITE_PLUGIN_PATTERN"
 
 echo "--- Checking File Spell"
 
